@@ -9,7 +9,7 @@ class Contact < ActiveRecord::Base
 end
 
 get "/contacts" do
-  @accounts = Contacts.all
+  @contacts = Contacts.all
   erb :index
 end
 
