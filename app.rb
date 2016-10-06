@@ -18,8 +18,8 @@ get "/" do
 end
 
 
-class Contact < ActiveRecord::Base
-  self.table_name = 'salesforce.contact'
+class Account < ActiveRecord::Base
+  self.table_name = 'salesforce.account'
 end
 
 #get "/contacts" do
