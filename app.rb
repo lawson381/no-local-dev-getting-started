@@ -1,6 +1,8 @@
 # app.rb
 
-
+require 'sinatra'
+require 'sinatra/activerecord'
+require './environments'
 
 class Account < ActiveRecord::Base
   self.table_name = 'salesforce.account'
@@ -20,10 +22,10 @@ class Account < ActiveRecord::Base
   self.table_name = 'salesforce.account'
 end
 
-#get "/contacts" do
-#  @contacts = Contact.all
-#  erb :index
-#end
+get "/accounts" do
+  @accounts = Account.all
+  erb :index
+end
 
 get "/create" do
   dashboard_url = 'https://dashboard.heroku.com/'
